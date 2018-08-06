@@ -1,9 +1,18 @@
 {
-  "name": "react-ssr",
+  "name": "ssr-react-app",
   "version": "1.0.0",
-  "description": "Server side rendering project",
+  "description": "Server side rendering react app project",
   "main": "index.js",
-  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RichardRosario/server-side-render-react-app"
+  },
+  "scripts": {
+    "dev:server": "nodemon build/bundle.js",
+    "dev:build-server": "webpack --config webpack.server.js --watch",
+    "dev:build-client": "webpack --config webpack.client.js --watch",
+    "dev": "npm-run-all --parallel dev:*"
+  },
   "author": "",
   "license": "ISC",
   "dependencies": {
@@ -32,7 +41,8 @@
     "redux": "3.7.2",
     "redux-thunk": "2.2.0",
     "serialize-javascript": "1.4.0",
-    "webpack": "^4.16.4",
+    "webpack": "^4.9.2",
+    "webpack-cli": "^3.1.0",
     "webpack-dev-server": "2.8.2",
     "webpack-merge": "4.1.0",
     "webpack-node-externals": "1.6.0"

@@ -14,7 +14,7 @@ const config = {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'build') 
   },
-  mode: 'production',
+  mode: 'development',
 
   externals: [webpackNodeExternals()]
 
